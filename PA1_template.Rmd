@@ -6,8 +6,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-#fig.path = "figures/"
+knitr::opts_chunk$set(echo = TRUE,fig.path = "./figures/")
 ```
 
 ##Loading and preprocessing the data
