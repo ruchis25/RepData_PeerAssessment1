@@ -43,7 +43,7 @@ steps_per_day<-aggregate(data=df_activity_cc,steps~date,sum)
 hist(steps_per_day$steps,xlab="Steps per Day",main="Histogram of Steps per day",col="pink")
 ```
 
-![](./figure/histogram_1-1.png)<!-- -->
+![](./figures/histogram_1-1.png)<!-- -->
 
 ```r
 #mean and median of total number of steps per day
@@ -75,7 +75,7 @@ mean_steps_interval<-aggregate(data=df_activity,steps~interval,mean)
 ggplot(mean_steps_interval,aes(interval,steps))+geom_line()+theme_bw() + xlab("Interval")+ylab("Average steps takes across all days") + ggtitle("Time series plot  for time interval/average # of steps")
 ```
 
-![](./figure/time_series_plot_2-1.png)<!-- -->
+![](./figures/time_series_plot_2-1.png)<!-- -->
 
 ```r
 #maximum number of average steps in 5 minutes interval
@@ -119,7 +119,7 @@ total_steps_per_day_imputed<-aggregate(data=df_activity,steps~date,sum)
 hist(total_steps_per_day_imputed$steps,xlab="Steps per Day",main="(imputed)Histogram of Steps per day",col="pink")
 ```
 
-![](./figure/histogram_3-1.png)<!-- -->
+![](./figures/histogram_3-1.png)<!-- -->
 
 ```r
 #mean and median of total number of steps per day after imputing values
@@ -179,4 +179,4 @@ mean_steps_interval_imputed<-aggregate(data=df_activity,steps~interval+day_type,
 ggplot(mean_steps_interval_imputed,aes(interval,steps))+geom_line()+theme_bw() + facet_grid(day_type~.)
 ```
 
-![](./figure/time_series_plot_4-1.png)<!-- -->
+![](./figures/time_series_plot_4-1.png)<!-- -->
